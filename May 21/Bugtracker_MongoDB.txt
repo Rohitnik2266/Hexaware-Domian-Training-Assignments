@@ -1,0 +1,66 @@
+test> use bugtracker
+switched to db bugtracker
+bugtracker> db.bugs.insertMany([
+... { title: 'Login button not working',
+... reportedBy: 'Rohit',
+... status: 'open',
+... priority : 'high',
+... createdAt: new Date()}
+... ,{
+... title: 'Spelling Mistake on homescreen',
+... reportedBy: 'Rakesh',
+... status: 'in progress',
+... priority: 'low',
+... createdAt: new Date()},
+... {title: 'Page crashes on submit',
+... reportedBy: 'Tharun',
+... status: 'open',
+... priority: 'high',
+... createdAt: new Date()}
+... ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('682db55f371501415dcc8988'),
+    '1': ObjectId('682db55f371501415dcc8989'),
+    '2': ObjectId('682db55f371501415dcc898a')
+  }
+}
+bugtracker> db.bugs.find(
+... {status: 'open',
+... priority: 'high'}
+... )
+[
+  {
+    _id: ObjectId('682db55f371501415dcc8988'),
+    title: 'Login button not working',
+    reportedBy: 'Rohit',
+    status: 'open',
+    priority: 'high',
+    createdAt: ISODate('2025-05-21T11:13:35.478Z')
+  },
+  {
+    _id: ObjectId('682db55f371501415dcc898a'),
+    title: 'Page crashes on submit',
+    reportedBy: 'Tharun',
+    status: 'open',
+    priority: 'high',
+    createdAt: ISODate('2025-05-21T11:13:35.478Z')
+  }
+]
+bugtracker> db.bugs.updateOne(
+... {reportedBy: 'Tharun'},
+... {$set: {status: 'closed'}}
+... )
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+bugtracker> db.bugs.deleteOne(
+... {reportedBy: 'Rakesh'}
+... )
+{ acknowledged: true, deletedCount: 1 }
+bugtracker>

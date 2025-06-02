@@ -1,0 +1,28 @@
+// Use or create the database
+use ExpenseDB;
+
+// Define the Receipts collection
+const receipts = db.Receipts;
+
+// Insert a sample receipt document
+receipts.insertOne({
+  user_id: ObjectId("665f0abc1234567890abcdef"), // Replace with the actual ObjectId from your Users collection
+  date: new Date("2025-06-15"),
+  category: "Utilities",
+  notes: "Paid electricity bill at BESCOM office",
+  receipt: {
+    store: "BESCOM",
+    items: [
+      { item: "Electricity Charges", price: 1150 },
+      { item: "Service Fee", price: 50 }
+    ],
+    total: 1200
+  }
+});
+
+// Create indexes for quick lookups
+receipts.createIndex({ user_id: 1 });
+receipts.createIndex({ "receipt.store": 1 });
+
+// Confirmation log
+print("Updated receipt inserted and indexes created successfully.");

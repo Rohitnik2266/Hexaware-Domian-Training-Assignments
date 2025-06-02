@@ -1,0 +1,8 @@
+user_id,category,amount_display,date,description,month
+1,Groceries,₹500.00,7/1/2025,Groceries at SuperMart,2025-07
+1,Utilities,"₹1,200.00",7/24/2025,Electricity bill,2025-07
+1,Entertainment,₹300.00,7/26/2025,Netflix subscription,2025-07
+1,Groceries,₹650.00,7/2/2025,Monthly ration,2025-07
+1,Transport,₹200.00,7/15/2025,Fuel expense,2025-07
+2,Groceries,₹450.00,6/2/2025,Weekly shopping,2025-06
+2,Utilities,"₹1,000.00",6/6/2025,Gas bill,2025-06

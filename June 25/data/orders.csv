@@ -1,0 +1,6 @@
+order_id,customer_id,order_date,product,quantity
+1001,CUST001,2025-06-20,Laptop,1
+1002,CUST002,2025-06-20,Keyboard,2
+1003,CUST003,2025-06-21,Mouse,1
+1004,CUST004,2025-06-21,,3
+1005,,2025-06-22,Monitor,2

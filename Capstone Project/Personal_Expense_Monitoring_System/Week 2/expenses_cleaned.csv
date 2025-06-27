@@ -1,0 +1,11 @@
+ExpenseID,UserID,CategoryID,Amount,Date,Notes,Month
+101,1,1,1200.0,2025-05-10,Big Bazaar purchase,2025-05
+102,1,2,450.0,2025-05-12,Bus ticket,2025-05
+103,1,3,2000.0,2025-05-15,Electricity bill,2025-05
+104,2,4,3000.0,2025-05-20,Clothes at Myntra,2025-05
+105,2,5,600.0,2025-05-25,Dinner at McDonald's,2025-05
+106,1,1,800.0,2025-06-02,Local grocery,2025-06
+107,1,3,1900.0,2025-06-05,Water bill,2025-06
+108,2,2,1000.0,2025-06-08,Uber ride,2025-06
+109,1,5,750.0,2025-06-10,Zomato lunch,2025-06
+110,2,4,2200.0,2025-06-12,Amazon sale,2025-06

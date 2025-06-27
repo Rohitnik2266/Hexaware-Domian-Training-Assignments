@@ -1,0 +1,80 @@
+test> use PresonalExpDB
+switched to db PresonalExpDB
+PresonalExpDB> db.receipts.insertMany([
+...   {
+...     receipt_id: "r001",
+...     user_id: 1,
+...     notes: "Grocery at Big Bazaar",
+...     scanned_copy: "base64string1..."
+...   },
+...   {
+...     receipt_id: "r002",
+...     user_id: 1,
+...     notes: "Travel ticket",
+...     scanned_copy: "base64string2..."
+...   },
+...   {
+...     receipt_id: "r003",
+...     user_id: 1,
+...     notes: "Electricity Bill",
+...     scanned_copy: "base64string3..."
+...   },
+...   {
+...     receipt_id: "r004",
+...     user_id: 2,
+...     notes: "Myntra Shopping",
+...     scanned_copy: "base64string4..."
+...   },
+...   {
+...     receipt_id: "r005",
+...     user_id: 2,
+...     notes: "McD food",
+...     scanned_copy: "base64string5..."
+...   },
+...   {
+...     receipt_id: "r006",
+...     user_id: 1,
+...     notes: "Grocery Local",
+...     scanned_copy: "base64string6..."
+...   },
+...   {
+...     receipt_id: "r007",
+...     user_id: 1,
+...     notes: "Water Bill",
+...     scanned_copy: "base64string7..."
+...   },
+...   {
+...     receipt_id: "r008",
+...     user_id: 2,
+...     notes: "Uber Ride",
+...     scanned_copy: "base64string8..."
+...   },
+...   {
+...     receipt_id: "r009",
+...     user_id: 1,
+...     notes: "Lunch on Zomato",
+...     scanned_copy: "base64string9..."
+...   },
+...   {
+...     receipt_id: "r010",
+...     user_id: 2,
+...     notes: "Amazon Order",
+...     scanned_copy: "base64string10..."
+...   }
+... ]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('685d0501095a1c759bcc8988'),
+    '1': ObjectId('685d0501095a1c759bcc8989'),
+    '2': ObjectId('685d0501095a1c759bcc898a'),
+    '3': ObjectId('685d0501095a1c759bcc898b'),
+    '4': ObjectId('685d0501095a1c759bcc898c'),
+    '5': ObjectId('685d0501095a1c759bcc898d'),
+    '6': ObjectId('685d0501095a1c759bcc898e'),
+    '7': ObjectId('685d0501095a1c759bcc898f'),
+    '8': ObjectId('685d0501095a1c759bcc8990'),
+    '9': ObjectId('685d0501095a1c759bcc8991')
+  }
+}
+PresonalExpDB>

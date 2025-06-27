@@ -1,0 +1,9 @@
+>_MONGOSH
+
+use SmartHomeDB
+switched to db SmartHomeDB
+db.sensor_logs.createIndex({ "device_id": 1 });
+device_id_1
+db.sensor_logs.createIndex({ "timestamp": 1 });
+timestamp_1
+SmartHomeDB>

@@ -1,0 +1,32 @@
+
+test> use SmartHomeDB
+switched to db SmartHomeDB
+SmartHomeDB> db.log.insertMany([
+...   {"device_id": 101, "timestamp": "2025-06-26T09:00:00", "power": 0.2},
+...   {"device_id": 101, "timestamp": "2025-06-26T12:00:00", "power": 0.3},
+...   {"device_id": 102, "timestamp": "2025-06-26T10:00:00", "power": 0.5},
+...   {"device_id": 103, "timestamp": "2025-06-26T11:00:00", "power": 0.8},
+...   {"device_id": 104, "timestamp": "2025-06-26T13:00:00", "power": 0.6},
+...   {"device_id": 105, "timestamp": "2025-06-26T14:00:00", "power": 1.2},
+...   {"device_id": 103, "timestamp": "2025-06-26T15:00:00", "power": 0.9},
+...   {"device_id": 102, "timestamp": "2025-06-26T16:00:00", "power": 0.4},
+...   {"device_id": 101, "timestamp": "2025-06-26T17:00:00", "power": 0.3},
+...   {"device_id": 105, "timestamp": "2025-06-26T18:00:00", "power": 1.5}
+... ]
+... )
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('685ea576a57e80f1f4cc8988'),
+    '1': ObjectId('685ea576a57e80f1f4cc8989'),
+    '2': ObjectId('685ea576a57e80f1f4cc898a'),
+    '3': ObjectId('685ea576a57e80f1f4cc898b'),
+    '4': ObjectId('685ea576a57e80f1f4cc898c'),
+    '5': ObjectId('685ea576a57e80f1f4cc898d'),
+    '6': ObjectId('685ea576a57e80f1f4cc898e'),
+    '7': ObjectId('685ea576a57e80f1f4cc898f'),
+    '8': ObjectId('685ea576a57e80f1f4cc8990'),
+    '9': ObjectId('685ea576a57e80f1f4cc8991')
+  }
+}
+SmartHomeDB>

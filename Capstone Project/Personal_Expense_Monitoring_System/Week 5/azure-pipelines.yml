@@ -1,0 +1,31 @@
+trigger:
+  schedule:
+    - cron: "0 9 * * 1"  # every Monday at 9AM
+      displayName: Weekly Trigger
+      branches:
+        include:
+          - main
+  branches:
+    include:
+      - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  DATABRICKS_TOKEN: $(databricksToken)
+  DATABRICKS_HOST: 'https://adb-2342854597430550.10.azuredatabricks.net'
+
+steps:
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.8'
+
+- script: |
+    pip install requests
+    python devops/scripts/run_etl_notebook.py
+  displayName: 'Trigger Databricks ETL'
+
+- script: |
+    python devops/scripts/email_alert_if_exceeds.py
+  displayName: 'Send Alert if Spending Threshold Crossed'
